@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.tachtalk.stream.map_reduce.Employee;
+import com.tachtalk.stream.custom_mapreducer.Employee;
 
 public class EmployeeDB {
 	public static List<Employee> getEmployees(){

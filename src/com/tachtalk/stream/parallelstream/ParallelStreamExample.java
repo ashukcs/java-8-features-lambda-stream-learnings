@@ -3,7 +3,7 @@ package com.tachtalk.stream.parallelstream;
 import java.util.List;
 import java.util.stream.IntStream;
 
-import com.tachtalk.stream.map_reduce.Employee;
+import com.tachtalk.stream.custom_mapreducer.Employee;
 
 public class ParallelStreamExample {
 	public static void main(String[] args) {
