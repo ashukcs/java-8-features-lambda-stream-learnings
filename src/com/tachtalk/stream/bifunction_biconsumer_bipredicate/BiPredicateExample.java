@@ -23,8 +23,18 @@ public class BiPredicateExample implements BiPredicate<String, String>{
 		
 		System.out.println("Annonymous approach : are both objects equal? - " + biPredicateAnnonymous.test("madam", "madam"));
 		
-		BiPredicate<String, String> biPredicateLambda = (s1,s2) -> s1.equals(s2);
-		System.out.println("Lambda approach : are both objects equals? - " + biPredicateLambda.test("Sam", "Mas"));
+		BiPredicate<String, String> equalsPredicate = (s1,s2) -> s1.equals(s2);
+		BiPredicate<String, String> lengthPredicate = (s1,s2) -> s1.length()==s2.length();
+		
+		System.out.println("Lambda approach : " + equalsPredicate.and(lengthPredicate).test("madam", "madam"));
+		
+		System.out.println("Lambda approach : " + equalsPredicate.or(lengthPredicate).test("abef", "ghij"));
+
+		System.out.println("Lambda approach : " + lengthPredicate.and(equalsPredicate).test("abef", "ghij"));
+
+		System.out.println("Lambda approach : " + lengthPredicate.or(equalsPredicate).test("abef", "ghij"));
+
+		
 	}
 
 }
