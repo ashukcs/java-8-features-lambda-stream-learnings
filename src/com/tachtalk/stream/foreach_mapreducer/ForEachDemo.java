@@ -24,6 +24,7 @@ public class ForEachDemo {
 		
 		list.stream().forEach(s->System.out.println("Iteration with streaming api - "+s));
 		
+		//usage of predicate
 		Predicate<String> predicate = (s)-> s.startsWith("R");
 		list.stream().filter(s-> s.startsWith("R")).forEach(t->System.out.println("Interation with stream filter - "+t));
 		
